@@ -7,9 +7,10 @@ import (
 )
 
 type client struct {
-	socket *websocket.Conn
-	send   chan []byte
-	room   *room
+	socket   *websocket.Conn
+	send     chan *message
+	room     *room
+	userData map[string]interface{}
 }
 
 // データ受信用のWebSocketを作成
