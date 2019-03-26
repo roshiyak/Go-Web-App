@@ -73,7 +73,7 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 			Name:  "auth",
 			Value: authCookieValue,
 			Path:  "/"})
-		w.Header()["Loication"] = []string{"/chat"}
+		w.Header()["Location"] = []string{"/chat"}
 		w.WriteHeader(http.StatusTemporaryRedirect)
 	default:
 		w.WriteHeader(http.StatusNotFound)
