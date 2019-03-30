@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 WORKDIR /app
-COPY chat_linux /app
+COPY chat_linux templates/ /app/
 
 EXPOSE 8080
 
